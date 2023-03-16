@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <style>
+
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .container {
+      display:flex;
+      justify-content:space-evenly;
+      border-radius: 20px;
+    }
+
+    .flex-item {
+      width:100%;
+      height: 800px;
+    }
+
+    .sedans {
+      background-color: #e28525;
+    }
+
+    .suvs {
+      background-color: #016972;
+    }
+
+    .luxury {
+      background-color: #00403f;
+    }
+
+    .img {
+      margin-top: 40px;
+      margin-left:15%;
+    }
+ 
+    .container h1{
+      color:white;
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      margin-left:15%;
+    }
+
+    .container p {
+      color:white;
+      margin-left:15%;
+      margin-right: 15%;
+      margin-top:5%;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size:15px;
+    }
+
+    .btn {
+      margin-left:15%;
+      margin-right:50%;
+      margin-top:10%;
+      border-radius: 30px;
+      border:1px solid white;
+      color:white;
+      padding: 15px 30px;
+      font-size:15px;
+      font-family: 'Lexend Deca', sans-serif;
+      cursor:pointer;
+    }
+
+    .btn:hover {
+      background-color: white;
+    }
+
+    .btn-color1 {
+      background-color: #e28525;
+      color: white;
+    }
+    .btn-color2 {
+      background-color: #016972;
+    }
+    .btn-color3 {
+      background-color: #00403f;
+    }
+
+    .btn-color1:hover {
+      color:#e28525
+    }
+
+    .btn-color2:hover {
+      color:#016972
+    }
+    .btn-color3:hover {
+      color:#00403f
+    }
+ 
+    @media screen and (min-width: 375px)
+    {
+      .container {
+        flex-wrap: wrap;
+      }
+      .sedans {
+        border-bottom-left-radius: 0%;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+      }
+      .luxury {
+        border-top-right-radius: 0%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+ 
+    @media screen and (min-width: 1440px)
+    {
+      .container {
+        flex-wrap:nowrap;
+      }
+      .sedans {
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 20px;
+      }
+
+      .luxury {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px; 
+        border-bottom-left-radius: 0;
+      }
+    }
+ 
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="flex-item sedans">
+      <img class= "img" src="./images/icon-sedans.svg" alt="">
+      <h1>SEDANS</h1>
+      <p class="content">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+      <button class="btn btn-color1">Learn More</button>
+    </div>
+
+    <div class="flex-item suvs">
+      <img class= "img" src="./images/icon-suvs.svg" alt="">
+      <h1>SUVS</h1>
+      <p class="content">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+      <button class="btn btn-color2">Learn More</button>
+    </div>
+
+    <div class="flex-item luxury">
+      <img class= "img" src="./images/icon-luxury.svg" alt="">
+      <h1>LUXURY</h1>
+      <p class="content">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+      <button class="btn btn-color3">Learn More</button>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
